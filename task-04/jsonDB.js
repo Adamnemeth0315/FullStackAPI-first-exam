@@ -16,8 +16,8 @@ const jsonPath = join(__dirname, 'db', 'products.json');
  * @returns objektumok tömbje
  */
 const getList = async () => {
-    const products = await fsp.readFile(jsonPath, 'utf8');
-    return JSON.parse(products);
+    const content = await fsp.readFile(jsonPath, 'utf8');
+    return JSON.parse(content);
 };
 
 /**
